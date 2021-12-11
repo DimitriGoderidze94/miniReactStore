@@ -1,13 +1,51 @@
+* {
+  text-align: center;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 97vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h3 {
+  height: 20%;
+  border: 1px solid black;
+}
+
+.productCard {
+  width: 28vw;
+  height: 80vh;
+  margin: 1vw;
+  min-width: 290px;
+  border: 1px solid black;
+  border-radius: 3%;
+  display: inline-block;
+}
+
+label {
+  border: 1px solid black;
+}
+
+img {
+  height: 60%;
+  width: 90%;
+}
+.box {
+  border: 1px solid black;
+  font-size: 20px !important;
+  margin: 0.2vw;
+}
+
+.boxContainer {
+  height: 10vh;
+}
+
+#wrapper {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#fullInfo .productCard {
+  width: 500px;
+  max-width: 90vw;
+  height: 90vh;
 }
