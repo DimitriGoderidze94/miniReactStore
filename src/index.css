@@ -1,13 +1,60 @@
 * {
   text-align: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   width: 97vw;
+  background-color: rgb(255, 239, 213);
 }
 
 h3 {
-  height: 20%;
+  height: 15%;
+  color: orangered;
+}
+
+h6 {
+  margin-top: 20%;
+  font-size: 300%;
+  color: orangered;
+}
+
+select {
+  width: 25vw;
+  padding: 3px;
+  color: #8a2be2;
+  font-weight: 700;
+  background-color: #d3d3d3;
+}
+
+label {
   border: 1px solid black;
+  margin: 1%;
+  width: 25vw;
+  padding: 3px;
+  color: #8a2be2;
+  font-weight: 700;
+  background-color: #d3d3d3;
+}
+
+.navBar {
+  width: 100%;
+  border: 1px solid black;
+  background-color: rgb(255, 0, 255);
+  border-radius: 3%;
+  height: 120px;
+  vertical-align: top;
+}
+
+.navButtons {
+  margin: 1%;
+  width: 22%;
+  height: 80%;
+  border-radius: 10%;
+  font-size: 18px;
+  vertical-align: top;
+  background-color: rgb(221, 160, 221);
+  color: indigo;
 }
 
 .productCard {
@@ -18,34 +65,48 @@ h3 {
   border: 1px solid black;
   border-radius: 3%;
   display: inline-block;
-}
-
-label {
-  border: 1px solid black;
+  background-color: rgb(255, 255, 51, 0.4);
 }
 
 img {
-  height: 60%;
+  height: 52%;
   width: 90%;
 }
 .box {
-  border: 1px solid black;
-  font-size: 20px !important;
-  margin: 0.2vw;
+  margin: 1%;
+  min-width: 20px;
+  border-radius: 10%;
+
+  border: 2px solid rgb(154, 205, 50);
+  color: darkblue;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 .boxContainer {
-  height: 10vh;
+  height: 19%;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5%;
 }
 
 #wrapper {
   text-align: center;
   padding: 0;
   margin: 0;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 2%;
+  background-color: rgb(255, 228, 181);
+  min-height: 80vh;
 }
 
 #fullInfo .productCard {
   width: 500px;
   max-width: 90vw;
   height: 90vh;
+}
+
+#filter {
+  margin: 1%;
 }

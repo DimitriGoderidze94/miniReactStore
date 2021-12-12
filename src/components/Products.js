@@ -30,7 +30,9 @@ const Products = (props) => {
     const json = info1;
 
     const categoryList = json.map((categories) => (
-      <button key={categories}>{categories}</button>
+      <button className="navButtons" key={categories}>
+        {categories}
+      </button>
     ));
 
     // const responseList = await fetch(mainUrl + "/category/" + category);
@@ -40,9 +42,12 @@ const Products = (props) => {
       (object) => object.category === category && object.price <= maxPrice
     );
 
-    ReactDOM.render(categoryList, document.getElementById("products"));
+    ReactDOM.render(
+      <div className="navBar">{categoryList}</div>,
+      document.getElementById("products")
+    );
 
-    const productList = jsonlist.map((category1) => (
+    var productList = jsonlist.map((category1) => (
       <ProductContainer
         img={category1["image"]}
         category={category}
@@ -50,6 +55,8 @@ const Products = (props) => {
         id={category1["id"]}
         title={category1["title"]}
         price={category1["price"]}
+        rate={category1["rating"]["rate"]}
+        ratecount={category1["rating"]["count"]}
         click={() => {
           ReactDOM.render(
             <div id="fullInfo">
@@ -60,6 +67,9 @@ const Products = (props) => {
                 key={category1["title"]}
                 title={category1["title"]}
                 price={category1["price"]}
+                rate={category1["rating"]["rate"]}
+                ratecount={category1["rating"]["count"]}
+                description={category1["description"]}
               />
             </div>,
             document.getElementById("wrapper")
@@ -67,6 +77,13 @@ const Products = (props) => {
         }}
       />
     ));
+    if (productList.length === 0) {
+      productList = (
+        <div id="wrapper">
+          <h6>No such product</h6>
+        </div>
+      );
+    }
     ReactDOM.render(productList, document.getElementById("wrapper"));
     // } catch (error) {
     //   console.log("error", error);
